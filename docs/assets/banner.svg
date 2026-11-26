@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="title desc">
+  <title id="title">Instagram Edits MCP</title>
+  <desc id="desc">A local, security-focused bridge between MCP clients and Instagram Edits on macOS.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#10111c"/><stop offset="1" stop-color="#1c1128"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#ffb24b"/><stop offset=".46" stop-color="#f34b87"/><stop offset="1" stop-color="#9675ff"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#c94c9f" stop-opacity=".24"/><stop offset="1" stop-color="#c94c9f" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#fff" stroke-opacity=".045"/></pattern>
+  </defs>
+  <rect x="1" y="1" width="1198" height="378" rx="23" fill="url(#bg)" stroke="#373044" stroke-width="2"/>
+  <rect x="2" y="2" width="1196" height="376" rx="22" fill="url(#grid)"/>
+  <ellipse cx="1000" cy="163" rx="250" ry="175" fill="url(#glow)"/>
+  <path d="M24 2H1176" stroke="url(#accent)" stroke-width="3" stroke-linecap="round"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
+    <g transform="translate(58 50)">
+      <rect width="221" height="29" rx="14.5" fill="#282132" stroke="#514259"/>
+      <circle cx="15" cy="14.5" r="4" fill="#7ee2ad"/>
+      <text x="27" y="19" fill="#e5dcea" font-size="12" font-weight="600" letter-spacing="1.6">LOCAL FIRST · macOS</text>
+    </g>
+    <text x="56" y="153" font-size="65" font-weight="750" fill="#faf7ff" letter-spacing="-2.8">Instagram Edits</text>
+    <text x="56" y="226" font-size="76" font-weight="750" fill="url(#accent)" letter-spacing="-3">MCP</text>
+    <text x="58" y="272" font-size="23" fill="#ded4e7">Automatización de vídeo mediante IA.</text>
+    <text x="58" y="306" font-size="19" fill="#a9a0b5">Un puente local, seguro y sin dependencias.</text>
+    <g transform="translate(58 340)" font-size="11" font-weight="600" letter-spacing="1.25" fill="#bdb0c8">
+      <text>CLAUDE CODE</text><circle cx="111" cy="-4" r="2.2" fill="#f34b87"/><text x="124">CLAUDE DESKTOP</text><circle cx="254" cy="-4" r="2.2" fill="#f34b87"/><text x="267">CODEX</text><circle cx="329" cy="-4" r="2.2" fill="#f34b87"/><text x="342">MCP CLIENTS</text>
+    </g>
+    <!-- Original project symbol: video frame + connection nodes. Not a third-party logo. -->
+    <g transform="translate(802 60)">
+      <rect width="326" height="257" rx="22" fill="#15131e" stroke="#484051" stroke-width="1.5"/>
+      <path d="M0 43H326" stroke="#393143"/>
+      <circle cx="20" cy="22" r="4" fill="#f36d87"/><circle cx="34" cy="22" r="4" fill="#e9bb6d"/><circle cx="48" cy="22" r="4" fill="#7ddfb2"/>
+      <text x="163" y="26" font-size="11" fill="#a69bb2" text-anchor="middle" font-family="monospace">instagram-edits-mcp</text>
+      <g transform="translate(25 81)">
+        <rect width="80" height="80" rx="18" fill="#252033" stroke="#594766"/>
+        <path d="M31 27L18 40l13 13m18-26 13 13-13 13m-5-31-8 36" fill="none" stroke="#cfb8f7" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="40" y="101" font-size="11" text-anchor="middle" fill="#bdb0c8" letter-spacing="1">CLIENT</text>
+      </g>
+      <path d="M105 121H129M197 121H221" stroke="url(#accent)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="3 5"/>
+      <g transform="translate(129 87)">
+        <rect width="68" height="68" rx="17" fill="#302237" stroke="#cc6da9"/>
+        <path d="M34 15l17 7v12c0 12-8 18-17 23-9-5-17-11-17-23V22z" fill="none" stroke="#f3b1d8" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M27 34l5 5 10-11" fill="none" stroke="#8be8b9" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="34" y="95" font-size="11" text-anchor="middle" fill="#bdb0c8" letter-spacing="1">MCP</text>
+      </g>
+      <g transform="translate(221 81)">
+        <rect width="80" height="80" rx="18" fill="url(#accent)"/>
+        <rect x="19" y="21" width="42" height="38" rx="7" fill="none" stroke="#fff" stroke-width="2.5"/>
+        <path d="M35 31l14 9-14 9z" fill="#fff"/><path d="M19 51h42" stroke="#fff" stroke-width="2"/>
+        <text x="40" y="101" font-size="11" text-anchor="middle" fill="#bdb0c8" letter-spacing="1">EDITS</text>
+      </g>
+      <rect x="25" y="209" width="276" height="27" rx="8" fill="#1d2826" stroke="#365247"/>
+      <circle cx="40" cy="222.5" r="4" fill="#7ee2ad"/>
+      <text x="52" y="226.5" fill="#a6e7c5" font-family="monospace" font-size="12">loopback only · 127.0.0.1</text>
+    </g>
+  </g>
+</svg>
