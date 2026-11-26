@@ -1,0 +1,34 @@
+name: Bug report
+description: Report a problem using instagram-edits-mcp with Instagram Edits
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include your Edits access token or any other secret. `doctor --json` output is safe to share."
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What you tried, what you expected and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: diagnosis
+    attributes:
+      label: Diagnosis
+      description: Output of `instagram-edits-mcp doctor --json`.
+      render: json
+    validations:
+      required: true
+  - type: input
+    id: edits-version
+    attributes:
+      label: Instagram Edits version
+      description: "Edits > About Edits"
+    validations:
+      required: true
+  - type: input
+    id: client
+    attributes:
+      label: MCP client
+      description: "Name and version, e.g. Claude Code, Claude Desktop or Codex"

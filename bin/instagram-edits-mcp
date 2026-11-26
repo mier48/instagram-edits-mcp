@@ -1,0 +1,23 @@
+#!/bin/sh
+# Launcher used by the Claude Code plugin (and usable by any MCP client) to run the server straight from
+# this checkout, without installing anything.
+#
+# - Finds a Python 3.12 or newer interpreter (set INSTAGRAM_EDITS_MCP_PYTHON to choose one).
+# - Runs it in isolated mode (-I): PYTHONPATH, PYTHONSTARTUP and other PYTHON* variables, the user
+#   site-packages and the current directory are ignored, so nothing outside src/ can be imported in
+#   place of the server's own modules.
+set -eu
+
+root=$(CDPATH='' cd -- "$(dirname -- "$0")/.." && pwd -P)
+
+for py in "${INSTAGRAM_EDITS_MCP_PYTHON:-}" python3.14 python3.13 python3.12 \
+          /opt/homebrew/bin/python3 /usr/local/bin/python3 python3; do
+  [ -n "$py" ] || continue
+  command -v "$py" >/dev/null 2>&1 || continue
+  if "$py" -I -c 'import sys; sys.exit(0 if sys.version_info >= (3, 12) else 1)' >/dev/null 2>&1; then
+    exec "$py" -I -c 'import sys; sys.path.insert(0, sys.argv.pop(1)); from instagram_edits_mcp.cli import main; raise SystemExit(main(sys.argv[1:]))' "$root/src" "$@"
+  fi
+done
+
+echo "[instagram-edits-mcp] Python 3.12 or newer is required. Install it (for example: brew install python@3.12) or set INSTAGRAM_EDITS_MCP_PYTHON." >&2
+exit 1

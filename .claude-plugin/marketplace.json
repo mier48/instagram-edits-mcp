@@ -1,0 +1,16 @@
+{
+  "name": "instagram-edits-mcp",
+  "owner": {
+    "name": "Alberto Mier"
+  },
+  "description": "Claude Code plugin for Instagram Edits for Mac: a local, hardened MCP bridge.",
+  "plugins": [
+    {
+      "name": "instagram-edits-mcp",
+      "source": "./",
+      "description": "Let Claude edit your Reels in Instagram Edits for Mac through its built-in automation server. Loopback-only, signature-checked, read-only mode and tool policies.",
+      "category": "media",
+      "tags": ["instagram", "instagram-edits", "edits", "reels", "video-editing", "mcp", "macos"]
+    }
+  ]
+}

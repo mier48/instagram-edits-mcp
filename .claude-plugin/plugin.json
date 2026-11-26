@@ -1,0 +1,37 @@
+{
+  "name": "instagram-edits-mcp",
+  "displayName": "Instagram Edits MCP",
+  "version": "0.2.0",
+  "description": "Local, hardened MCP server for Instagram Edits for Mac: the full dynamic tool set kept in sync, loopback-only, signature-checked, with a read-only mode and tool policies. Token kept in the keychain.",
+  "author": {
+    "name": "Alberto Mier"
+  },
+  "license": "MIT",
+  "keywords": ["instagram", "instagram-edits", "edits", "reels", "video-editing", "mcp", "mcp-server", "macos"],
+  "userConfig": {
+    "edits_token": {
+      "type": "string",
+      "title": "Edits access token",
+      "description": "In Edits: Settings > Automation > Enable Automation Server, then copy the Access token. Claude Code stores it in your system keychain; never paste it into a chat.",
+      "sensitive": true,
+      "required": true
+    },
+    "read_only": {
+      "type": "boolean",
+      "title": "Read-only mode",
+      "description": "Only list and allow tools that read state (appState, projects, get*, list*, ...). Nothing in Edits can be changed.",
+      "default": false,
+      "required": false
+    }
+  },
+  "mcpServers": {
+    "instagram-edits": {
+      "command": "${CLAUDE_PLUGIN_ROOT}/bin/instagram-edits-mcp",
+      "args": ["serve"],
+      "env": {
+        "INSTAGRAM_EDITS_MCP_TOKEN": "${user_config.edits_token}",
+        "INSTAGRAM_EDITS_MCP_READ_ONLY": "${user_config.read_only}"
+      }
+    }
+  }
+}

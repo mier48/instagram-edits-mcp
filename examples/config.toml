@@ -1,0 +1,27 @@
+# instagram-edits-mcp configuration example.
+# Install: copy to ~/.config/instagram-edits-mcp/config.toml, then chmod 600 it.
+# Every key is optional and shows its default, except `deny`, which shows a sensible restriction.
+# Unknown sections or keys are rejected.
+
+[server]
+url = "http://127.0.0.1:19501/mcp"   # plain http, loopback IP literal, explicit port
+verify = "enforce"                    # enforce | warn | off
+expected_identifier = "com.burbn.basel.mac"
+expected_team_id = "777W53UFB2"       # Developer ID Application: Instagram, Inc.
+timeout_seconds = 600
+max_response_mb = 64
+
+[policy]
+read_only = false
+allow = []
+deny = ["deleteProject"]
+
+[relay]
+track_tools = true                    # re-check the tool set after each tool call
+follow_stream = true                  # subscribe to Edits' notification stream if it offers one
+retry_seconds = 5                     # while Edits is unavailable
+
+[credentials]
+keychain = true
+keychain_service = "instagram-edits-mcp"
+keychain_account = "default"
